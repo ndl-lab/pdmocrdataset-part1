@@ -114,7 +114,7 @@ LINE株式会社が作成したアノテーションデータ(JSONフォーマ�
   </size>
   <segmented>0</segmented>
   <object>
-    <name>text</name>　（内部にテキストを読むobjectはtext、内部を読まないobjectはdontcareとなる。）
+    <name>text</name>　（※attributeにテキストを含むobjectはtext、テキストを含まない、中身を読まなくてよいobjectはdontcareが入る）
     <occluded>0</occluded>
     <bndbox>
       <xmin>1413.0</xmin>
