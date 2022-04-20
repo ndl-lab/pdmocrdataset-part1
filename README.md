@@ -1,4 +1,4 @@
-# PDMOCRデータセットパート１
+# PDMOCRデータセット（パート１）
 
 ## 概要
 
@@ -16,11 +16,9 @@
 
 次に挙げる2つの形式で公開しています。
 
-なお、いずれの形式においても文字コードの包摂は行っていません。
+なお、いずれの形式においても文字コードの包摂は行っていません。旧字体や異体字についても、視認された通りの表記で入力されています。
 
-旧字体や異体字についても、視認された通りの表記で入力されています。
-
-### 1. LINE形式(URLを入れる)
+### 1. LINE形式(https://lab.ndl.go.jp/dataset/line/pdmlinetrainjson.zip)
 
 LINE株式会社が作成したアノテーションデータ(JSONフォーマット)及びアノテーションデータに対応する画像データからなります。
 
@@ -31,6 +29,79 @@ LINE株式会社が作成したアノテーションデータ(JSONフォーマ�
 ファイルサイズを小さく抑えるため、LINE形式の画像データの縦横比を半分にしています。（アノテーションデータに含まれる座標情報も同様）
 内部のテキスト情報はオブジェクト毎にattributeとして記述しています。
 
+## ディレクトリ構成
+データセット作成対象とした図書資料の刊行年代（10年刻み）及び分類（日本十進分類法における4類・5類・6類の資料を理系、それ以外を文系と定義）によりディレクトリを分けています。
+
+### 1. LINE形式
+
+```
+tosho_all_linejson
+├── img
+│?? ├── tosho_1870_bunkei
+│?? ├── tosho_1870_rikei
+│?? ├── tosho_1880_bunkei
+│?? ├── tosho_1880_rikei
+│?? ├── tosho_1890_bunkei
+│?? ├── tosho_1890_rikei
+│?? ├── tosho_1900_bunkei
+│?? ├── tosho_1900_rikei
+│?? ├── tosho_1910_bunkei
+│?? ├── tosho_1910_rikei
+│?? ├── tosho_1920_bunkei
+│?? ├── tosho_1920_rikei
+│?? ├── tosho_1930_bunkei
+│?? ├── tosho_1930_rikei
+│?? ├── tosho_1940_bunkei
+│?? └── tosho_1940_rikei
+└── json
+    ├── tosho_1870_bunkei
+    ├── tosho_1870_rikei
+    ├── tosho_1880_bunkei
+    ├── tosho_1880_rikei
+    ├── tosho_1890_bunkei
+    ├── tosho_1890_rikei
+    ├── tosho_1900_bunkei
+    ├── tosho_1900_rikei
+    ├── tosho_1910_bunkei
+    ├── tosho_1910_rikei
+    ├── tosho_1920_bunkei
+    ├── tosho_1920_rikei
+    ├── tosho_1930_bunkei
+    ├── tosho_1930_rikei
+    ├── tosho_1940_bunkei
+    └── tosho_1940_rikei
+```
+
+### 2. PascalVOC 1.1形式
+
+```
+tosho_all_pascalvoc1.1
+├── tosho_1870_bunkei
+│?? ├── Annotations
+│?? │?? └── pdmlinetrainimg
+│?? │??     └── tosho_1870_bunkei
+│?? ├── ImageSets
+│?? │?? ├── Action
+│?? │?? ├── Layout
+│?? │?? ├── Main
+│?? │?? └── Segmentation
+│?? └── JPEGImages
+│??     └── pdmlinetrainimg
+│??         └── tosho_1870_bunkei
+├── tosho_1870_rikei
+│?? ├── Annotations
+│?? │?? └── pdmlinetrainimg
+│?? │??     └── tosho_1870_rikei
+│?? ├── ImageSets
+│?? │?? ├── Action
+│?? │?? ├── Layout
+│?? │?? ├── Main
+│?? │?? └── Segmentation
+│?? └── JPEGImages
+│??     └── pdmlinetrainimg
+│??         └── tosho_1870_rikei
+（以下略）
+```
 
 ## 作成対象とした画像のメタデータ
 
@@ -41,8 +112,7 @@ LINE株式会社が作成したアノテーションデータ(JSONフォーマ�
 ## アノテーション例
 
 
-### 1. LINE形式(URLを入れる)
-
+### 1. LINE形式
 
 ```
 {
