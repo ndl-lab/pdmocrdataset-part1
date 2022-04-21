@@ -20,15 +20,15 @@
 
 なお、いずれの形式においても文字コードの包摂は行っていません。旧字体や異体字についても、視認された通りの表記で入力されています。
 
-### 1. LINE形式(https://lab.ndl.go.jp/dataset/pdm_ocr_dataset/line/tosho_all_linejson.zip)
+### 1. LINE形式(https://lab.ndl.go.jp/dataset/pdm_ocr_dataset/line/tosho_all_linejson.zip) (※ファイルサイズ:4.8 GB)
 
 LINE株式会社が作成したアノテーションデータ(JSONフォーマット)及びアノテーションデータに対応する画像データからなります。
 
 
-### 2. PascalVOC 1.1形式(https://lab.ndl.go.jp/dataset/pdm_ocr_dataset/line/tosho_all_pascalvoc1.1.zip)
+### 2. PascalVOC 1.1形式(https://lab.ndl.go.jp/dataset/pdm_ocr_dataset/line/tosho_all_pascalvoc1.1.zip) (※ファイルサイズ:1.8 GB)
 
 当館で納入物の検品を実施した際にLINE形式をもとに変換したPascalVOC形式のアノテーションデータ（xmlフォーマット）及びアノテーションデータに対応する画像データからなります。
-ファイルサイズを小さく抑えるため、LINE形式の画像データの縦横比を半分にしています。（アノテーションデータに含まれる座標情報も同様）
+ファイルサイズを小さく抑えるため、LINE形式の画像データのサイズ（縦幅及び横幅）を半分にしています。（アノテーションデータに含まれる座標情報も同様）
 内部のテキスト情報はオブジェクト毎にattributeとして記述しています。
 出力にはcvat(https://github.com/openvinotoolkit/cvat
 )のエクスポート機能を利用しています。
